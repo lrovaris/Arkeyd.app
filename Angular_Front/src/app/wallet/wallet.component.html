@@ -1,1 +1,18 @@
-<p>wallet works!</p>
+<div class="col body-col">
+    <div class="row" style="margin-bottom: 5vw;">
+        <small>total balance</small>
+        <h1>~ 0,21 ETH</h1>
+    </div>
+    <div class="row" *ngFor="let balance of wallet()">
+        <div class="col-6 text-align-left"><h3>{{balance.value}}</h3></div>
+        <div class="col-6 text-align-right"><h3>{{balance.symbol}}</h3></div>
+    </div>
+    <div class="row" style="margin-top: 5vw;">
+      <div class="col">
+        <button class="btn primary" routerLink="deposit">DEPOSIT</button>
+      </div>
+      <div class="col">
+        <button class="btn secondary" routerLink="withdraw">WITHDRAW</button>
+      </div>
+    </div>
+</div>

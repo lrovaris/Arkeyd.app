@@ -1,0 +1,59 @@
+<div class="row" style="margin: 4vw; font-size: calc(12px + 0.9vw);">
+  <div class="col text-align-right">I want to</div>
+  <div class="col text-align-left">
+    <div class="dropdown">
+    <p  class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      {{buySell()}}
+    </p>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" (click)="buySell.set('sell')">sell</a></li>
+        <li><a class="dropdown-item" (click)="buySell.set('buy')">buy</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8" style="text-align: left; line-height: 12px;">
+    <input type="text" class="form-control btn-input" id="exampleFormControlInput1" placeholder="72.45">
+  </div>
+  <div class="col-4">
+    <div class="dropdown">
+      <button style="width: 100%; border: 1px solid black;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        KOKI
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item disabled" >coming soon</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8" style="text-align: left;">
+    <small>
+
+    </small>
+  </div>
+  <div class="col-3" style="text-align: right;">
+    <small>
+      152.35
+    </small>
+  </div>
+</div>
+<div class="row" style="margin-top: 1vw; text-align: left; font-size: 18px; font-weight: 400;">
+<div class="col-6">for total</div>
+<div class="col-6">@ price</div>
+</div>
+<div class="row">
+  <div class="col-6" style="text-align: left; line-height: 12px; position: relative;">
+    <input type="text" class="form-control btn-input" id="exampleFormControlInput1" placeholder="0.025" >
+    <small class="input-left">
+      ETH
+    </small>
+  </div>
+  <div class="col-6" style="text-align: left; line-height: 12px; position: relative;">
+    <input type="text" class="form-control btn-input" id="exampleFormControlInput1" placeholder="0.00014">
+    <small class="input-left">
+      KOKI/ETH
+    </small>
+  </div>
+</div>

@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: black;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+
+.max-width-600 {
+    max-width: 700px;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.btn {
+  border-radius: 40px;
+  padding: 12px;
+  font-size: calc(8px + 0.9vw);
+  font-weight: 600;
+}
+
+.primary {
+  color: #fff;
+  background-color: #000;
+}
+
+.secondary {
+  color: #fff;
+  background-color: #FF7649;
+}
+
+.btn-input {
+  background-color: rgba(0, 0, 0, 0.055);
+  border-radius: 40px;
+  padding: 12px;
+  font-size: calc(8px + 0.9vw);
+}
+
+.color-primary {
+  color: #FF7649 !important;
+}
+

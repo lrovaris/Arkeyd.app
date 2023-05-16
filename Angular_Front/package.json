@@ -18,10 +18,12 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@metamask/detect-provider": "^2.0.0",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "@web3-react/walletconnect-connector": "^6.2.13",
     "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.13.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.1",

@@ -1,0 +1,14 @@
+.deposit-qr-code {
+  background-image: url('https://pngimg.com/uploads/qr_code/qr_code_PNG25.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 1 / 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.edit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

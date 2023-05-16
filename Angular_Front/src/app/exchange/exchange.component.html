@@ -1,1 +1,18 @@
-<p>exchange works!</p>
+
+<div class="col">
+  <div class="row">
+    <ul class="nav nav-tabs nav-fill justify-content-center">
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="/exchange/swap" [class.active]="!router.url.includes('limit-order')" aria-current="page" >Swap</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link " routerLink="/exchange/limit-order" [class.active]="router.url.includes('limit-order')">limit order</a>
+      </li>
+    </ul>
+  </div>
+
+  <app-swap *ngIf="!router.url.includes('limit-order')"></app-swap>
+
+  <app-limit-order *ngIf="router.url.includes('limit-order')"></app-limit-order>
+
+</div>
