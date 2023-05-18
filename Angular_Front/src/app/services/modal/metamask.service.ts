@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { WinRefService } from '../winRef/win-ref.service';
+import { UserService } from '../user/user.service';
 
 
 @Injectable({
@@ -7,25 +8,29 @@ import { WinRefService } from '../winRef/win-ref.service';
 })
 
 export class MetamaskService {
-  
+
   ethereum:any;
 
-  constructor(private winRef: WinRefService) {
+  wallet = signal('')
+
+  constructor(private winRef: WinRefService, private user: UserService) {
 
     this.ethereum = winRef.window.ethereum;
 
   }
 
   async connectAccount(callback:any) {
-    
-    await this.ethereum.request({ method: 'eth_requestAccounts' })
+
+    let wallet = await this.ethereum.request({ method: 'eth_requestAccounts' })
+
+    this.wallet.set(wallet[0])
 
     callback();
 
   }
 
   async getChainId() {
-    
+
     return await this.ethereum.request({ method: 'eth_chainId' });
 
   }

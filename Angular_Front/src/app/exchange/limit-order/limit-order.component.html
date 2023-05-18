@@ -14,15 +14,15 @@
 </div>
 <div class="row">
   <div class="col-8" style="text-align: left; line-height: 12px;">
-    <input type="text" class="form-control btn-input" id="exampleFormControlInput1" placeholder="72.45">
+    <input type="text" class="form-control btn-input" id="exampleFormControlInput1" [placeholder]="availableValue()">
   </div>
   <div class="col-4">
     <div class="dropdown">
       <button style="width: 100%; border: 1px solid black;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        KOKI
+        {{selectedCoin()}}
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item disabled" >coming soon</a></li>
+        <li *ngFor="let coin of balance()" ><a class="dropdown-item" (click)="selectedCoin.set(coin.symbol)" >{{coin.symbol}}</a></li>
       </ul>
     </div>
   </div>
@@ -35,7 +35,7 @@
   </div>
   <div class="col-3" style="text-align: right;">
     <small>
-      152.35
+      {{availableValue()}}
     </small>
   </div>
 </div>

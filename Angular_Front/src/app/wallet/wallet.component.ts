@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { UserService } from '../services/user/user.service';
 
 @Component({
   selector: 'app-wallet',
@@ -9,21 +10,31 @@ export class WalletComponent {
 
   wallet = signal([
     {
-      value:0.03,
+      value:30000000000000000,
       symbol:'ETH'
     },
     {
-      value:17.6,
+      value:17600000000000000000,
       symbol:'ARKD'
     },
     {
-      value:217.4,
+      value:217400000000000000000,
       symbol:'KOKI'
     },
     {
-      value:3512.2,
+      value:3512200000000000000000,
       symbol:'BLOB'
     }
   ])
+
+
+  constructor (public user: UserService) {
+
+  }
+
+
+  formatbalance(value:number) {
+    return (value / (10 ** 18)).toFixed(2)
+  }
 
 }
