@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav me-auto mb-2 mb-lg-0"><!--please dont tell anyone--></div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" [class.active]="router.url.includes('user')">
+          <a class="nav-link"  [class.disabled]="metamask.wallet() == ''" routerLink="user" aria-current="page" >my account</a>
+        </li>
+        <li class="nav-item" [class.active]="router.url.includes('exchange')">
+          <a class="nav-link" [class.disabled]="metamask.wallet() == ''" routerLink="exchange">exchange</a>
+        </li>
+        <li class="nav-item" [class.active]="router.url.includes('staking')">
+          <a class="nav-link disabled"  routerLink="staking" aria-current="page" >marketplace</a>
+        </li>
+        <li class="nav-item" [class.active]="router.url.includes('launchpad')">
+          <a class="nav-link disabled"  routerLink="launchpad">launchpad</a>
+        </li>
+      </ul>
+      <div class="d-flex me-2" >
+        <a (click)="connect()" class="nav-link cursor-pointer" >{{metamask.wallet() != '' ? reduceWallet(metamask.wallet()) : 'no wallet connected'}}</a>
+      </div>
+    </div>
+  </div>
+</nav>
+

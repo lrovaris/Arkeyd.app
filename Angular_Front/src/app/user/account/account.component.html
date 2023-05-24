@@ -1,0 +1,22 @@
+
+<div class="col" >
+  <div class="row" style="margin: 4vw; font-size: calc(12px + 0.9vw);">
+    <div class="col d-flex justify-content-center " style="text-align: center; padding: 12px; min-width: calc(200px + 1.8vw); font-size: calc(14px + 0.5vw);">I want to see my</div>
+    <div class="col text-align-left ">
+      <select #selec class="form-select " (click)="current_view.set(selec.value)" id="floatingSelect" aria-label="Floating label select example">
+        <option value="wallet">wallet</option>
+        <option value="staking">staking</option>
+        <option value="security">owned items</option>
+        <option value="security">security</option>
+        <option value="notifications">notifications</option>
+        <option value="profile">profile</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+   <app-wallet *ngIf="current_view() == 'wallet'"></app-wallet>
+   <app-staking *ngIf="current_view() == 'staking'"></app-staking>
+   <app-security *ngIf="current_view() == 'security'"></app-security>
+   <app-profile *ngIf="current_view() == 'profile'"></app-profile>
+  </div>
+</div>

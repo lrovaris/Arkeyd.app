@@ -3,24 +3,27 @@ import { CommonModule } from '@angular/common';
 import { SecurityComponent } from './security/security.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import { AccountComponent } from './account/account.component';
+import { WalletModule } from '../wallet/wallet.module';
+import { StakingComponent } from './staking/staking.component';
 
 const routes: Routes = [
   {
-    path: 'security', component: SecurityComponent
-  },
-  {
-    path: 'profile', component: ProfileComponent
-  },
+    path: '', component: AccountComponent
+  }
 ];
 
 @NgModule({
   declarations: [
     SecurityComponent,
-    ProfileComponent
+    ProfileComponent,
+    AccountComponent,
+    StakingComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    WalletModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class UserModule { }

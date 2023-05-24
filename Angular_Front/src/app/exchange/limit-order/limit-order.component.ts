@@ -8,6 +8,7 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class LimitOrderComponent {
 
+
   buySell = signal('sell')
   balance = signal(this.userService.user().balance)
   selectedCoin = signal('ETH')
@@ -17,4 +18,5 @@ export class LimitOrderComponent {
   constructor(private userService : UserService) {
 
   }
+
 }

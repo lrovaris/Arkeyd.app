@@ -17,20 +17,31 @@
     <input type="text" class="form-control btn-input" id="exampleFormControlInput1" [placeholder]="availableValue()">
   </div>
   <div class="col-4">
-    <div class="dropdown">
+    <!--div class="dropdown">
       <button style="width: 100%; border: 1px solid black;" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
         {{selectedCoin()}}
       </button>
       <ul class="dropdown-menu">
         <li *ngFor="let coin of balance()" ><a class="dropdown-item" (click)="selectedCoin.set(coin.symbol)" >{{coin.symbol}}</a></li>
       </ul>
+    </div-->
+
+    <div class="form-floating bs-light bs-light-rgb">
+      <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+        <option value="1">Koki</option>
+        <option value="1">ARKD</option>
+        <option value="2">RKT</option>
+        <option value="3">ETH</option>
+      </select>
+      <label for="floatingSelect">Coin</label>
     </div>
+
   </div>
 </div>
 <div class="row">
   <div class="col-8" style="text-align: left;">
     <small>
-
+      Available Balance
     </small>
   </div>
   <div class="col-3" style="text-align: right;">

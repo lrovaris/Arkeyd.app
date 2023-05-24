@@ -6,4 +6,48 @@
   color: #3a3a3a;
 }
 
+.nav-link {
+  border-radius: 0px 10000px 0px 1000px;
+  border-left: none;
+}
 
+
+
+.nav-item {
+
+}
+
+.right {
+  position: relative;
+}
+
+.right::before {
+  content: '';
+  position: absolute;
+  top: 18.2px;
+  left: 4px; /* Adjusted value to control border length */
+  width: 100%;
+  height: 100%;
+  border: #c0c0c0 1px solid;
+  border-radius: 0 0 0 50px;
+  border-top: none;
+  border-right: none;
+}
+
+.left {
+  position: relative;
+}
+
+.left::before {
+  content: '';
+  position: absolute;
+  bottom: 18px;
+  left: 5.2px; /* Adjusted value to control border length */
+  width: 100%;
+  height: 100%;
+  border: #c0c0c0 1px solid;
+  border-radius: 0 50px 0 0;
+  border-bottom: none;
+  border-left: none;
+  box-sizing: border-box;
+}

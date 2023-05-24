@@ -18,3 +18,13 @@
     margin-right: 2vw;
     font-size: 24px;
   }
+
+  .navbar-brand {
+    background-image: url('../../../assets/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: calc(50px + 4vw);
+    border-radius: 50%;
+  }
+

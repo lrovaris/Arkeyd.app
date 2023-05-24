@@ -6,7 +6,7 @@ import { DepoistComponent } from './depoist/depoist.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 
 const routes: Routes = [
-  {path: '', component: WalletComponent},
+  {path: 'balance', component: WalletComponent},
   {path: 'deposit', component: DepoistComponent},
   {path: 'withdraw', component: WithdrawComponent},
 ];
@@ -20,6 +20,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
+  ],
+  exports:[
+    WalletComponent
   ]
 })
 export class WalletModule { }

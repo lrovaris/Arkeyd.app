@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
@@ -15,12 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./exchange/exchange.module').then(m => m.ExchangeModule),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-  },
-  {
-    path: 'staking',
-    loadChildren: () => import('./staking/staking.module').then(m => m.StakingModule),
+    path: '', component: HomeComponent
   },
   {
     path: 'launchpad',
