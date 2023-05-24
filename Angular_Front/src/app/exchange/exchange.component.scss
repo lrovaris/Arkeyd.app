@@ -24,10 +24,10 @@
 .right::before {
   content: '';
   position: absolute;
-  top: 18.2px;
+  top: 28px;
   left: 4px; /* Adjusted value to control border length */
   width: 100%;
-  height: 100%;
+  height: 80%;
   border: #c0c0c0 1px solid;
   border-radius: 0 0 0 50px;
   border-top: none;
@@ -42,12 +42,21 @@
   content: '';
   position: absolute;
   bottom: 18px;
-  left: 5.2px; /* Adjusted value to control border length */
+  left: 5px; /* Adjusted value to control border length */
   width: 100%;
-  height: 100%;
+  height: 80%;
   border: #c0c0c0 1px solid;
   border-radius: 0 50px 0 0;
   border-bottom: none;
   border-left: none;
   box-sizing: border-box;
+}
+
+.nav {
+  font-size: 20px;
+  font-weight: 574;
+}
+
+.nav .disabled {
+  font-weight: 300;
 }

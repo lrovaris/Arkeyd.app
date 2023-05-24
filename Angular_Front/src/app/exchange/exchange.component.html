@@ -1,24 +1,21 @@
 
-<div class="col">
-  <div class="row">
-    <ul class="nav  nav-fill justify-content-center border-correction">
-      <li class="nav-item left" >
-        <a class="nav-link" routerLink="/exchange/swap" [class.active]="!router.url.includes('limit-order')" aria-current="page" >Swap</a>
-      </li>
-      <li class="nav-item right" >
-        <a class="nav-link disabled" routerLink="/exchange/limit-order" [class.active]="router.url.includes('limit-order')">limit order</a>
-      </li>
-    </ul>
+<div class="container" style="min-width: 360px; margin-top: calc(40px + 2vw);">
+  <div class="col" style="margin-bottom: calc(40px + 2vw);">
+    <div class="row">
+      <ul class="nav nav-fill justify-content-center border-correction">
+        <li class="nav-item left" >
+          <a class="nav-link" routerLink="/exchange/swap" [class.active]="!router.url.includes('limit-order')" aria-current="page" >swap</a>
+        </li>
+        <li class="nav-item right" >
+          <a class="nav-link disabled" routerLink="/exchange/limit-order" [class.active]="router.url.includes('limit-order')">limit order</a>
+        </li>
+      </ul>
+    </div>
   </div>
+
+
+
 
   <app-swap *ngIf="!router.url.includes('limit-order')"></app-swap>
   <app-limit-order *ngIf="router.url.includes('limit-order')"></app-limit-order>
-
-</div>
-
-
-
-<div class="parent">
-  <!-- Content goes here -->
-  <div class="line"></div>
 </div>

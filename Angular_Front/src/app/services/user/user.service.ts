@@ -14,7 +14,7 @@ export class UserService {
       backupAddress:'',
       balance:[
         {
-          symbol:'ETH',
+          symbol:'USDT',
           value:0
         }
       ],

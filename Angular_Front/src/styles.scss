@@ -83,11 +83,22 @@ input[type="color"]:focus,
 
 
 
+
+
+
 .btn-input {
   background-color: rgba(0, 0, 0, 0.055);
   border-radius: 40px;
-  padding: 12px;
-  font-size: calc(8px + 0.9vw);
+  padding: 12px 18px;
+  border: none;
+}
+
+.dropdown-toggle::after {
+ margin-right: -1px;
+ margin-left: none;
+ position: absolute;
+ right: 28px;
+ top: 18px;
 }
 
 .color-primary {
@@ -114,4 +125,14 @@ input[type="color"]:focus,
 
 svg {
   cursor: pointer;
+}
+
+.btn {
+  font-size: calc(16px + 0.2vw);
+}
+.dropdown-toggle {
+  border-radius: 40px;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 18px;
 }

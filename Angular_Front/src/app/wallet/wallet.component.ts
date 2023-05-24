@@ -11,7 +11,7 @@ export class WalletComponent {
   wallet = signal([
     {
       value:30000000000000000,
-      symbol:'ETH'
+      symbol:'USDT'
     },
     {
       value:17600000000000000000,
