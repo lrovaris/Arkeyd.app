@@ -1,16 +1,34 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, ViewChild, signal, AfterViewInit  } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit  {
+
+  @ViewChild('myVideo') myVideo: any;
+
+  gambiarra = true;
+
+  ngAfterViewInit(): void {
+
+  }
 
   ngOnInit(): void {
     setInterval(()=>{
       this.getCountdownString()
+
     },1000)
+
+
+  }
+
+  playVideo(): void {
+    const videoElement: HTMLVideoElement = this.myVideo.nativeElement;
+    console.log(videoElement)
+    videoElement.play();
+    this.gambiarra = false;
   }
 
   secondsLeft = 0

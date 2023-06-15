@@ -1,6 +1,7 @@
 <div class="video-container">
-  <video autoplay muted loop>
-      <source src="../../assets/home_video.webm" type="video/mp4" />
+  <video #myVideo autoplay muted playsinline loop>
+    <source src="../../assets/home_video.webm" type="video/webm" />
+      <source src="../../assets/loop-bgvideo.mp4" type="video/mp4" />
   </video>
   <div class="caption">
 
@@ -44,4 +45,8 @@
 
 
   </div>
+</div>
+
+<div *ngIf="gambiarra" (click)="playVideo()" class="video-gambiarra">
+
 </div>
