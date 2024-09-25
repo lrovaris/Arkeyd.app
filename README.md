@@ -33,13 +33,13 @@ The project requires an environment variable `MONGOURL` to connect to a MongoDB 
 1. **Clone the repository:**
 
 ```bash
-$ git clone <repository-url>
+$ git clone
 ```
 
 2. **Navigate to the project directory:**
 
 ```bash
-$ cd angular-16-signals-project
+$ cd Arkeyd.app
 ```
 
 3. **Install dependencies:**
@@ -74,19 +74,6 @@ The build artifacts will be stored in the `dist/` directory.
 
 The backend is built with **Node.js** and requires no additional setup since the MongoDB URL is pre-configured.
 
-## 🧪 Testing
-
-To run unit tests:
-
-```bash
-$ npm run test
-```
-
-To run end-to-end tests:
-
-```bash
-$ npm run e2e
-```
 
 ## 📖 What I Learned
 
@@ -101,6 +88,3 @@ For further details or collaboration inquiries, feel free to reach out:
 
 ---
 
-## 📝 License
-
-This project is [MIT licensed](LICENSE).
