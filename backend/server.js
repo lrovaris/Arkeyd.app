@@ -5,7 +5,9 @@ const app = express()
 const { MongoClient, ObjectId } = require('mongodb');
 const { init_db, get_db} = require ('./db');
 const { get_collection, update_data_in_collection, register_data_in_collection } = require ('./user/db')
+const compression = require('compression');
 
+app.use(compression());
 
 app.use(bodyParser.json({ limit: "200mb",  extended: false, parameterLimit: 1000000 }));
 app.use((req, res, next) => {
